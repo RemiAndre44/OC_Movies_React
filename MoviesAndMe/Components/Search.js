@@ -72,6 +72,7 @@ class Search extends React.Component {
         <Button title='Rechercher' onPress={() => this._searchFilms()}/>
         <FlatList
           data={this.state.films}
+          extraData = { this.props.favoritesFilm}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({item}) => <FilmItem film={item} displayDetailForFilm={this._displayDetailForFilm}/>}
           onEndReachedThreshold={0.5}

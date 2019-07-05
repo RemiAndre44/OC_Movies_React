@@ -2,10 +2,10 @@ const initialState = { favoritesFilm: []}
 
 
 function toggleFavorite(state = initialState, action){
-  let nestState
+  let nextState
   switch(action.type){
     case 'TOGGLE_FAVORITE' :
-      const favoritesFilmIndex = state.favoritesFilm.findIndex(index => item.id === action.value.id)
+      const favoritesFilmIndex = state.favoritesFilm.findIndex(item => item.id === action.value.id)
       if(favoritesFilmIndex !== -1){
         //suppression
         nextState = {
